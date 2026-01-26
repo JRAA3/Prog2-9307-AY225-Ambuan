@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 420px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1.8px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #66a6ff;
+            box-shadow: 0 0 5px rgba(102,166,255,0.5);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #66a6ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #4d91ff;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .success-message {
+            background: #e9fbe9;
+            border: 2px solid #2ecc71;
+            color: #2e7d32;
+        }
+
+        .error-message {
+            background: #fdecea;
+            border: 2px solid #e74c3c;
+            color: #c0392b;
+        }
+
+        .timestamp-section {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f8e9;
+            border-radius: 8px;
+            border: 2px solid #8bc34a;
+            text-align: center;
+        }
+
+        .timestamp-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #33691e;
+        }
+
+        .timestamp-value {
+            font-family: monospace;
+            font-size: 14px;
+            margin-top: 5px;
+            color: #1b5e20;
+        }
+
+        .attendance-records-section {
+            display: none;
+            margin-top: 25px;
+            padding: 18px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+
+        .attendance-records-section h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .attendance-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .attendance-table thead {
+            background: #66a6ff;
+            color: white;
+        }
+
+        .attendance-table th,
+        .attendance-table td {
+            padding: 10px;
+            font-size: 13px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .attendance-table tbody tr:hover {
+            background: #f1f1f1;
+        }
+
+        .download-button-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .download-btn {
+            padding: 10px 20px;
+            background: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .download-btn:hover {
+            background: #27ae60;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h2>Login</h2>
+
+    <!-- Login Form (NO action to avoid redirect) -->
+    <form>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Login</button>
+    </form>
+
+    <!-- Timestamp -->
+    <div id="timestamp-display" class="timestamp-section">
+        <div class="timestamp-label">Login Time</div>
+        <div id="login-time" class="timestamp-value"></div>
+    </div>
+</div>
+
+<!-- JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>
