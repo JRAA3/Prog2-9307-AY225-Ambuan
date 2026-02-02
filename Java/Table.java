@@ -1,4 +1,4 @@
-// John Rowelle Ambuan - 123456
+// John Rowelle Ambuan - 25-1984-196
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -173,4 +173,4 @@ public class Table extends JFrame {
     }
 }
 
-// John Rowelle Ambuan - 123456
+// John Rowelle Ambuan - 25-1984-196
