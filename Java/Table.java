@@ -15,7 +15,7 @@ public class Table extends JFrame {
     private final String CSV_FILE = "C:\\Users\\John Rowelle\\OneDrive\\Clone Repository\\Prog2-9307-AY225-Ambuan\\Java\\class_records.csv";
 
     public Table() {
-        setTitle("Records - John Rowelle Ambuan 123456");
+        setTitle("Records - John Rowelle Ambuan 25-1984-196");
         setSize(1200, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
